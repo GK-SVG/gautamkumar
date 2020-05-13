@@ -1,4 +1,138 @@
 {% extends 'basic.html' %}
+{% block css %}
+html {
+    font-size: 18px;
+  }
+  
+  body {
+    background-color: white;
+  }
+  .image-container {
+    overflow: hidden;
+  }
+  
+  .image-container img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+  }
+  /* Banner Section */
+  p {
+    min-width: 250px;
+    min-height: 250px;
+  }
+  
+  #banner {
+    height: 30rem;
+    background-image: url('https://www.bitdegree.org/storage/file-251193-JkkLKeYBXNIxYk7k.jpg');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+  
+  #banner h1 {
+    
+    font-family: 'Philosopher', sans-serif;
+    font-weight: 295;
+    color: white;
+    font-size: 4rem;
+  }
+  
+  /* Blog Post */
+  
+  #blog {
+    width: 85%;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  #blog .post {
+    width: 50%;
+    margin-top: 15%;
+    margin-bottom: 7.5%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: 'Philosopher', sans-serif;
+    font-weight: 300;
+    font-size: 1rem;
+    text-align: center;
+    line-height: 1.8;
+    color: #444444;
+  }
+  
+  .post h2 {
+    font-size: 2rem;
+    
+  }
+  
+  .post h3 {
+    font-size: 1.25rem;
+    color: #999999;
+  }
+  
+  .post .opening-line {
+    margin-top: 4.1875rem;
+    margin-bottom: 1.5rem;
+    color: black;
+    font-weight: bold;
+  }
+  
+  .post .image-container {
+    width: 100%;
+  }
+  
+  /* Blog Images */
+  
+  .images {
+    margin-bottom: 15%;
+  }
+  
+  .images .image-container {
+    display: inline-block;
+    width: 50%;
+  }
+  
+  /* Footer */
+  
+  footer {
+    padding: 4rem 0;
+    border-top: 1px solid #999999;
+    font-family: 'Philosopher', sans-serif;
+    font-size: 1.25rem;
+    color: #999999;
+    text-align: center;
+  }
+{% endblock css %}
 {% block body %}
-
+{% load static %}
+<div id="banner">
+		<h1>Gautam Kumar</h1>
+	</div>
+	<div id="blog">
+		<div class="post">
+			<h2>Gautam Kumar</h2>
+			<h3>Hi</h3>
+			
+			<p>I am Gautam.I pursuing my Batchler Degree in Computer field From <a class="text-dark"href="#">MITRC</a>,Alwar,Rajsthan.<br>
+            B.Tech,CSE(2018-2022)<br>
+            Currently I am developing Web Applications in Django(Python-Framework)
+            </p>
+			<a href="https://www.facebook.com/profile.php?id=100050134031510" class="text-dark">
+            <img src="{%static 'fb.png'%}" style="width:2em;height:2em;"><h2>Facebook</h2></a>
+            <a href="https://www.gmail.com" class="text-dark">
+            <img src="{%static 'gmail.png'%}" style="width:2em;height:2em;"><h2>Gmail</h2></a>
+            <p>gk32239@gmail.com</p>
+            
+		</div>
+	</div>
+	<footer>
+		<span>&copy; Gautam-Kumar</span>
+	</footer>
 {% endblock body %}

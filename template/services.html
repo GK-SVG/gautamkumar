@@ -1,3 +1,22 @@
 {% extends 'basic.html' %}
 {% block body %}
+<div class="container container-sm ">
+    <div class="col-md-12 col-12 col-sm-12">
+        <h1 class="my-3" style="text-align:center; font-size:xx-larger;"><b>My Certificates</b></h1>
+    </div>
+</div>
+<div class="row">
+    {% for certificate in certificates reversed %}
+    <div class="col-md-4 col-sm-12 col-12">
+        <div class="row no-gutters border rounded overflow-hidden flex-md-row my-3 mx-3 shadow-sm h-md-250 position-relative"
+            style="background-color: #ffffcc; width:350px;height:170px;">
+           <div class="mx-4 my-3 text-dark" style="text-align:center;"> 
+                <p class="text-center"><b>{{certificate.cf_org}}</b></p>
+                <p class="text-center">{{certificate.cf_name}}</p>
+           </div>
+           <a href="{{certificate.cf_link}}" class="text-dark mx-1 my-1 ">see certificate</a>
+        </div>
+    </div>
+    {% endfor %}
+</div>
 {% endblock body %}

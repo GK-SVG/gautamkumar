@@ -1,0 +1,20 @@
+{% extends 'basic.html' %}
+{% block body %}
+<div class="container container-sm ">
+        <div class="col-md-12 col-12 col-sm-12">
+            <h1 class="my-3" style="text-align:center; font-size:xx-larger;"><b>My Cooding Plateforms</b></h1>
+        </div>
+    </div>
+<div class="row">
+        {% for plateform in plateforms %}
+        <div class="col-md-4 col-sm-12 col-12">
+            <div
+                class="row no-gutters border rounded overflow-hidden flex-md-row my-4 shadow-sm h-md-250 position-relative" >
+                <a href="{{plateform.org_link}}">
+                    {% comment %} <h4 class="mt-1 ml-1" >{{plateform.org_name}}</h4> {% endcomment %}               
+               <img class="mx-5 p-1 "src="/media/{{plateform.org_image}}" style="width:19em;height:12em; "></a>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+{% endblock body %}

@@ -20,5 +20,5 @@ urlpatterns = [
     path('',views.index,name="Home"),
     path('about/',views.about,name="About"),
     path('certificate/',views.services,name="Services"),
-    path('contact/',views.contact,name="Contact")
+    path('plateforms/',views.plateform,name='Plateforms'),
 ]

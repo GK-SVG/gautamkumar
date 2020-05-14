@@ -1,5 +1,5 @@
 from django.shortcuts import render,HttpResponse
-from .models import Plateform,Certificate
+from .models import Plateform,Certificate,Skills,MyProjects
 
 def index(request):
     return render(request,'index.html')
@@ -10,7 +10,8 @@ def plateform(request):
 
 
 def about(request):
-    return render(request,'about.html')
+    skills=Skills.objects.all()
+    return render(request,'about.html',{'skills':skills})
 
 def services(request):
     certificates=Certificate.objects.all()

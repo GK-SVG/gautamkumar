@@ -12,7 +12,7 @@ class Certificate(models.Model):
 class Plateform(models.Model):
     org_name=models.CharField(max_length=70)
     org_link=models.CharField(max_length=250)
-    org_image=models.ImageField(upload_to='home/images')
+    org_image=models.CharField(max_length=265)
     def __str__(self):
         return self.org_name
     

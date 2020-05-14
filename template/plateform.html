@@ -1,11 +1,20 @@
 {% extends 'basic.html' %}
+{% block css %}
+.skills .card {
+    transition: transform .2s;
+    background-color: #fff;
+    margin-left: 10px;
+    margin-right: 10px;
+    width: 130px;
+    height: 150px;
+}
+{% endblock css %}
 {% block body %}
-<div class="container container-sm ">
-        <div class="col-md-12 col-12 col-sm-12">
-            <h1 class="my-3" style="text-align:center; font-size:xx-larger;"><b>My Cooding Plateforms</b></h1>
-        </div>
+<div >
+<div class="my-0">
+            <h1 style="text-align:center; font-size:xx-larger;"><b>My Cooding Plateforms</b></h1>
     </div>
-<div class="row">
+<div class="row mt-0" >
         {% for plateform in plateforms %}
         <div class="col-md-4 col-sm-12 col-12">
             <div
@@ -17,5 +26,5 @@
         </div>
         {% endfor %}
     </div>
-   
+ </div>  
 {% endblock body %}

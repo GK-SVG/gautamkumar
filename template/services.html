@@ -13,11 +13,12 @@
     <div class="col-md-4 col-sm-12 col-12">
         <div class="row no-gutters border rounded overflow-hidden flex-md-row my-3 mx-3 shadow-sm h-md-250 position-relative"
             style="background-color: #fff; width:350px;height:170px;">
-           <div class="mx-4 my-3 text-dark" style="text-align:center; font-family: "Comfortaa", serif;"> 
-                <p class="text-center" style="font-size:23px;"><b>{{certificate.cf_org}}</b></p>
-                <p class="text-center">{{certificate.cf_name}}</p>
+           <div class="mx-4 my-3 text-dark" style="text-align:center;"> 
+                <a href="{{certificate.cf_link}}" style="text-decoration:none;"><p class="text-center" style="font-size:2rem;font-family: Comfortaa, serif; color:#080707;"><b>{{certificate.cf_org}}</b></p>
+                <p class="text-center" style="font-size:1rem;font-family: Comfortaa, serif; color:#080707;">{{certificate.cf_name}}</p>
+           </a>
            </div>
-           <a href="{{certificate.cf_link}}" class="text-dark mx-1 mb-2 mt-0">see certificate</a>
+           
         </div>
     </div>
     {% endfor %}

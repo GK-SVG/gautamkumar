@@ -25,6 +25,7 @@ class Skills(models.Model):
 class MyProjects(models.Model):
     project_name=models.CharField(max_length=100)
     project_link=models.CharField(max_length=100)
+    project_type=models.CharField(max_length=100,default="")
     def __str__(self):
         return self.project_name
     

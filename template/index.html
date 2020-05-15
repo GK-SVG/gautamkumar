@@ -1,40 +1,178 @@
 {% extends 'basic.html' %}
 {% block css %}
-.card{
-    justify-content: center;
-    align-items: center;
-    text-align: center;
+html {
+font-size: 18px;
+}
+
+body {
+background-color: white;
+}
+.image-container {
+overflow: hidden;
+}
+
+.image-container img {
+max-width: 100%;
+height: auto;
+display: block;
+}
+/* Banner Section */
+p {
+min-width: 250px;
+min-height: 250px;
+}
+
+#banner {
+height: 30rem;
+background-image: url('https://www.bitdegree.org/storage/file-251193-JkkLKeYBXNIxYk7k.jpg');
+background-position: center;
+background-size: cover;
+background-repeat: no-repeat;
+display: flex;
+justify-content: center;
+align-items: center;
+text-align: center;
+}
+
+#banner h1 {
+
+font-family: 'Philosopher', sans-serif;
+font-weight: 295;
+color: white;
+font-size: 4rem;
+}
+
+/* Blog Post */
+
+#blog {
+width: 85%;
+margin: auto;
+display: flex;
+flex-direction: column;
+align-items: center;
+}
+
+#blog .post {
+width: 50%;
+margin-top: 15%;
+margin-bottom: 7.5%;
+display: flex;
+flex-direction: column;
+align-items: center;
+font-family: 'Philosopher', sans-serif;
+font-weight: 300;
+font-size: 1rem;
+text-align: center;
+line-height: 1.8;
+color: #444444;
+}
+
+.post h2 {
+font-size: 2rem;
+
+}
+
+.post h3 {
+font-size: 1.25rem;
+color:#080707;
+}
+
+.post .opening-line {
+margin-top: 4.1875rem;
+margin-bottom: 1.5rem;
+color: black;
+font-weight: bold;
+}
+
+.post .image-container {
+width: 100%;
+}
+
+/* Blog Images */
+
+.images {
+margin-bottom: 15%;
+}
+
+.images .image-container {
+display: inline-block;
+width: 50%;
+}
+footer {
+padding: 4rem 0;
+font-family: 'Philosopher', sans-serif;
+font-size: 1.25rem;
+color: #999999;
+text-align: center;
+}
+.bordershadow {
+  height: 70px;
+  width: 80%;
+  line-height: 70px;
+  text-align: center;
+  border: 2px solid #dd;
+  border-radius: 3px;
+  box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.2);
+  transition: all 200ms ease-out;
 }
 {% endblock css %}
-
 {% block body %}
-<div id="carouselExampleControls" class="carousel slide" data-ride="carousel" style="background-color:;">
-    <div class="carousel-inner">
-        <div class="carousel-item active">
-            {% load static %}
-            <img class="d-block w-100" src="{% static "A.jpeg" %}" alt="First slide">
-        </div>
-        <div class="carousel-item">
-            <img class="d-block w-100" src="{% static "B.jpeg" %}" alt="Second slide">
-        </div>
-        <div class="carousel-item">
-            <img class="d-block w-100" src="{% static "C.jpeg" %}" alt="Third slide">
-        </div>
-    </div>
-    <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
-        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-        <span class="sr-only">Previous</span>
-    </a>
-    <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
-        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-        <span class="sr-only">Next</span>
-    </a>
+{% load static %}
+<div id="banner">
+  <h1>Gautam Kumar </h1>
+
 </div>
-    <div class="container container-sm ">
-        <div class="col-md-12 col-12 col-sm-12">
-            <h1 class="my-3" style="text-align:center; font-size:xx-larger;font-color:;"><b>Gautam-Kumar</b><br>Web-Devloper</h1>
-            <p></p>
-        </div>
+<div id="blog">
+  <div class="post">
+    <h2>Gautam Kumar</h2>
+    <h3>Hi</h3>
+
+    <p>I am Gautam.I pursuing my Batchler Degree in Computer field From <a class="text-dark"
+        href="#">MITRC</a>,Alwar,Rajsthan.<br>
+      B.Tech,CSE(2018-2022)<br>
+      Currently I am developing Web Applications in Django(Python-Framework)
+    </p>
+  </div>
+</div>
+<div class="col-md-12 mt-5 mb-3" style="text-align:center;">
+  <h2 style="color:#080707;">My-Skills</h2>
+</div>
+<div class="row ">
+  {% for skill in skills %}
+  <div class="col-md-3">
+    <div
+      class="row no-gutters border rounded overflow-hidden flex-md-row my-2 mx-3  shadow-sm h-md-250 position-relative"
+      style="background-color: #fff; width:250px;height:150px; text-align:center;">
+      <p style="font-size:2rem;font-family: Comfortaa, serif; color:#080707;">{{skill.sk_name}}<br>{{skill.sk_type}}</p>
     </div>
-    </div>
+  </div>
+  {% endfor %}
+</div>
+<div class="col-md-12 mt-5 mb-3" style="text-align:center;">
+  <h2 style="color:#080707;">My-Projects</h2>
+</div>
+<div class="row ">
+  {% for project in projects %}
+  <div class="col-md-3 ">
+    <div
+      class="row  no-gutters border rounded overflow-hidden flex-md-row my-2 mx-3  shadow-sm h-md-250 position-relative"
+      style="background-color: #fff; width:250px;height:150px; text-align:center;">
+        <a href="{{project.project_link}}" style="text-decoration: none;"><p style="font-size:1.65rem;font-family: Comfortaa, serif; color:#080707;">{{project.project_name}}<br>{{project.project_type}}</p></a>
+       
+      </div>
+  </div>
+  {% endfor %}
+</div>
+<footer class="my-0">
+  <a href="https://www.facebook.com/profile.php?id=100050134031510" class="text-dark">
+    <img src="{%static 'fb.png'%}" style="width:2em;height:2em;">
+    <h2>Facebook</h2>
+  </a>
+  <a href="https://www.gmail.com" class="text-dark">
+    <img src="{%static 'gmail.png'%}" style="width:2em;height:2em;">
+    <h2>Gmail</h2>
+  </a>
+  <p>gk32239@gmail.com</p>
+</footer>
+
 {% endblock body %}

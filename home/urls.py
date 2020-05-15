@@ -18,7 +18,6 @@ from.import views
 
 urlpatterns = [
     path('',views.index,name="Home"),
-    path('about/',views.about,name="About"),
     path('certificate/',views.services,name="Services"),
     path('plateforms/',views.plateform,name='Plateforms'),
 ]

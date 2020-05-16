@@ -1,27 +1,44 @@
 {% extends 'basic.html' %}
 {% block css %}
-.skills .card {
-    transition: transform .2s;
-    background-color: #fff;
-    margin-left: 10px;
-    margin-right: 10px;
-    width: 130px;
-    height: 150px;
+.wh1{
+width:22em;
+height:12em;
 }
+.wh2{
+    width:19em;
+    height:12em;
+    margin-left:20px;
+     margin-right:20px;
+
+}
+ @media screen and (max-width: 820px) {
+           .wh1{
+             width:300px;
+             height:150px;
+             margin-right:5px;
+           }
+           .wh2{
+               width:305px;
+               height:150px;
+               margin-left:5px;
+     
+           }
+        }
 {% endblock css %}
 {% block body %}
-<div >
-<div class="my-0">
+<div class="container">
+<div class=" col-md-12 my-0">
             <h1 style="text-align:center; font-size:xx-larger;"><b>My Cooding Plateforms</b></h1>
     </div>
+  
 <div class="row mt-0" >
         {% for plateform in plateforms %}
         <div class="col-md-4 col-sm-12 col-12">
             <div
-                class="row no-gutters border rounded overflow-hidden flex-md-row my-4 shadow-sm h-md-250 position-relative" >
+                class="row no-gutters border wh1 rounded overflow-hidden flex-md-row my-4 shadow-sm h-md-250 position-relative">
                 <a href="{{plateform.org_link}}">
                     {% comment %} <h4 class="mt-1 ml-1" >{{plateform.org_name}}</h4> {% endcomment %}               
-               <img class="mx-5 p-1 "src="{{plateform.org_image}}" style="width:19em;height:12em; "></a>
+               <img class="p-4 wh2"src="{{plateform.org_image}}"></a>
             </div>
         </div>
         {% endfor %}

@@ -11,6 +11,13 @@ height:12em;
      margin-right:20px;
 
 }
+.mycard{
+      transition: transform .3s;
+}
+.mycard:hover { 
+    box-shadow: 5px 5px 10px rgba(0,0,0,0.4);
+    transform: scale(1.1);
+}
  @media screen and (max-width: 820px) {
            .wh1{
              width:300px;
@@ -35,7 +42,7 @@ height:12em;
         {% for plateform in plateforms %}
         <div class="col-md-4 col-sm-12 col-12">
             <div
-                class="row no-gutters border wh1 rounded overflow-hidden flex-md-row my-4 shadow-sm h-md-250 position-relative">
+                class="row no-gutters border wh1 rounded overflow-hidden flex-md-row my-4 shadow-sm h-md-250 position-relative mycard">
                 <a href="{{plateform.org_link}}">
                     {% comment %} <h4 class="mt-1 ml-1" >{{plateform.org_name}}</h4> {% endcomment %}               
                <img class="p-4 wh2"src="{{plateform.org_image}}"></a>

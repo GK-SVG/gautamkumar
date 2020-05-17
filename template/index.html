@@ -123,6 +123,13 @@ text-align: center;
   text-align:center;
   
 }
+.mycard{
+      transition: transform .3s;
+}
+.mycard:hover { 
+    box-shadow: 5px 5px 10px rgb(0,0,0);
+    transform: scale(1.1);
+}
 @media screen and (max-width: 820px) {
   .wh{
     background-color: #fff;
@@ -163,7 +170,11 @@ text-align: center;
   {% for skill in skills %}
   <div class="col-md-3  col-sm-9 col-9">
     <div
+<<<<<<< HEAD
       class="row no-gutters border rounded overflow-hidden flex-md-row my-2   shadow-sm h-md-250 position-relative wh" >
+=======
+      class="row no-gutters border rounded overflow-hidden flex-md-row my-2   shadow-sm h-md-250 position-relative wh mycard" >
+>>>>>>> mysite-debug
       <p style="font-size:2rem;font-family: Comfortaa, serif; color:#080707;">{{skill.sk_name}}<br>{{skill.sk_type}}</p>
     </div>
   </div>
@@ -176,7 +187,7 @@ text-align: center;
   {% for project in projects %}
   <div class="col-md-3  col-sm-12 col-12">
     <div
-      class="row  no-gutters border rounded overflow-hidden flex-md-row my-2  shadow-sm h-md-250 position-relative wh">
+      class="row  no-gutters border rounded overflow-hidden flex-md-row my-2  shadow-sm h-md-250 position-relative wh mycard">
         <a href="{{project.project_link}}" style="text-decoration: none;"><p style="font-size:1.65rem;font-family: Comfortaa, serif; color:#080707;">{{project.project_name}}<br>{{project.project_type}}</p></a>
        
       </div>

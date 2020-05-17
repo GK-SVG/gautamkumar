@@ -107,37 +107,37 @@ color: #999999;
 text-align: center;
 }
 .bordershadow {
-  height: 70px;
-  width: 80%;
-  line-height: 70px;
-  text-align: center;
-  border: 2px solid #dd;
-  border-radius: 3px;
-  box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.2);
-  transition: all 200ms ease-out;
+height: 70px;
+width: 80%;
+line-height: 70px;
+text-align: center;
+border: 2px solid #dd;
+border-radius: 3px;
+box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.2);
+transition: all 200ms ease-out;
 }
 .wh{
-  background-color: #fff;
-  width:250px;
-  height:150px;
-  text-align:center;
-  
+background-color: #fff;
+width:250px;
+height:150px;
+text-align:center;
+
 }
 .mycard{
-      transition: transform .3s;
+transition: transform .3s;
 }
-.mycard:hover { 
-    box-shadow: 5px 5px 10px rgb(0,0,0);
-    transform: scale(1.1);
+.mycard:hover {
+box-shadow: 5px 5px 10px rgb(0,0,0);
+transform: scale(1.1);
 }
 @media screen and (max-width: 820px) {
-  .wh{
-    background-color: #fff;
-  width:260px;
-  height:150px;
-  text-align:center;
-  margin-left:15px;
-  }
+.wh{
+background-color: #fff;
+width:260px;
+height:150px;
+text-align:center;
+margin-left:15px;
+}
 }
 {% endblock css %}
 {% block body %}
@@ -159,51 +159,51 @@ text-align: center;
   </div>
 </div>
 <div class="container">
-<div class="row">
-<div class="col-md-4"></div>
-<div class="col-md-4" style="text-align:center;">
-  <h2 style="color:#080707;">My-Skills</h2>
-</div>
-<div class="col-md-4"></div>
-</div>
-<div class="row ">
-  {% for skill in skills %}
-  <div class="col-md-3  col-sm-9 col-9">
-    <div
-<<<<<<< HEAD
-      class="row no-gutters border rounded overflow-hidden flex-md-row my-2   shadow-sm h-md-250 position-relative wh" >
-=======
-      class="row no-gutters border rounded overflow-hidden flex-md-row my-2   shadow-sm h-md-250 position-relative wh mycard" >
->>>>>>> mysite-debug
-      <p style="font-size:2rem;font-family: Comfortaa, serif; color:#080707;">{{skill.sk_name}}<br>{{skill.sk_type}}</p>
+  <div class="row">
+    <div class="col-md-4"></div>
+    <div class="col-md-4" style="text-align:center;">
+      <h2 style="color:#080707;">My-Skills</h2>
     </div>
+    <div class="col-md-4"></div>
   </div>
-  {% endfor %}
-</div>
-<div class="col-md-12 mt-5 mb-3" style="text-align:center;">
-  <h2 style="color:#080707;">My-Projects</h2>
-</div>
-<div class="row ">
-  {% for project in projects %}
-  <div class="col-md-3  col-sm-12 col-12">
-    <div
-      class="row  no-gutters border rounded overflow-hidden flex-md-row my-2  shadow-sm h-md-250 position-relative wh mycard">
-        <a href="{{project.project_link}}" style="text-decoration: none;"><p style="font-size:1.65rem;font-family: Comfortaa, serif; color:#080707;">{{project.project_name}}<br>{{project.project_type}}</p></a>
-       
+  <div class="row ">
+    {% for skill in skills %}
+    <div class="col-md-3  col-sm-9 col-9">
+      <div
+        class="row  no-gutters border rounded overflow-hidden flex-md-row my-2  shadow-sm h-md-250 position-relative wh mycard">
+        <p style="font-size:2rem;font-family: Comfortaa, serif; color:#080707;">{{skill.sk_name}}<br>{{skill.sk_type}}
+        </p>
       </div>
+    </div>
+    {% endfor %}
   </div>
-  {% endfor %}
-</div>
-<footer class="my-0">
-  <a href="https://www.facebook.com/profile.php?id=100050134031510" class="text-dark">
-    <img src="{%static 'fb.png'%}" style="width:2em;height:2em;">
-    <h2>Facebook</h2>
-  </a>
-  <a href="https://www.gmail.com" class="text-dark">
-    <img src="{%static 'gmail.png'%}" style="width:2em;height:2em;">
-    <h2>Gmail</h2>
-  </a>
-  <p>gk32239@gmail.com</p>
-</footer>
+  <div class="col-md-12 mt-5 mb-3" style="text-align:center;">
+    <h2 style="color:#080707;">My-Projects</h2>
+  </div>
+  <div class="row ">
+    {% for project in projects %}
+    <div class="col-md-3  col-sm-12 col-12">
+      <div
+        class="row  no-gutters border rounded overflow-hidden flex-md-row my-2  shadow-sm h-md-250 position-relative wh mycard">
+        <a href="{{project.project_link}}" style="text-decoration: none;">
+          <p style="font-size:1.65rem;font-family: Comfortaa, serif; color:#080707;">
+            {{project.project_name}}<br>{{project.project_type}}</p>
+        </a>
+
+      </div>
+    </div>
+    {% endfor %}
+  </div>
+  <footer class="my-0">
+    <a href="https://www.facebook.com/profile.php?id=100050134031510" class="text-dark">
+      <img src="{%static 'fb.png'%}" style="width:2em;height:2em;">
+      <h2>Facebook</h2>
+    </a>
+    <a href="https://www.gmail.com" class="text-dark">
+      <img src="{%static 'gmail.png'%}" style="width:2em;height:2em;">
+      <h2>Gmail</h2>
+    </a>
+    <p>gk32239@gmail.com</p>
+  </footer>
 </div>
 {% endblock body %}

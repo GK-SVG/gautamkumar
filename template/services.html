@@ -11,6 +11,13 @@ margin-left:20px;
 margin-right:20px;
 
 }
+.mycard{
+    transition: transform .3s;
+}
+.mycard:hover { 
+  box-shadow: 5px 5px 10px rgba(0,0,0,0.4);
+  transform: scale(1.1);
+}
 @media screen and (max-width: 820px) {
 .wh1{
 width:280px;
@@ -34,7 +41,7 @@ height:150px;
         {% for certificate in certificates reversed %}
         <div class="col-md-4 col-sm-9 col-9">
             <div
-                class="row no-gutters border rounded overflow-hidden flex-md-row my-3  shadow-sm h-md-250 position-relative wh1">
+                class="row no-gutters border rounded overflow-hidden flex-md-row my-3  shadow-sm h-md-250 position-relative wh1 mycard">
                 <div class="mx-3 my-3 text-dark" style="text-align:center;">
                     <a href="{{certificate.cf_link}}" style="text-decoration:none;">
                         <p class="text-center" style="font-size:2rem;font-family: Comfortaa, serif; color:#080707;">
